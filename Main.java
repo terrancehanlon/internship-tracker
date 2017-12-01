@@ -1,24 +1,20 @@
 
-	import java.io.FileWriter;
-	import java.io.IOException;
-	import java.util.Scanner;
-	import java.io.BufferedWriter;
-public class Main {
-	
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.BufferedWriter;
 
-
-	
-	    
-	    
-	    public static void start(){
+public class Main { 
+	   
+	public static void start(){
 	        Scanner scan = new Scanner(System.in);
 	        String fileName = "C:\\Users\\Ghost\\Desktop\\TestFile.txt";
 
-	        try{
-	        FileWriter fw = new FileWriter(fileName, true);
+	 try{
+	       FileWriter fw = new FileWriter(fileName, true);
 	      // BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 	        boolean cont = true; 
-	            while(cont){
+	      while(cont){ 
 	            System.out.println("Enter internship name: ");
 	            String name = scan.nextLine();   //enter name of internship
 	            fw.write("Title of Internship: " + name);
@@ -34,11 +30,11 @@ public class Main {
 	            fw.write("Link: " + link);
 	            
 	            fw.write("\r\n");
-	            fw.write("******************************************************");
+	            //look for printf() fix?
+		    fw.write("******************************************************");
 	            fw.write("\r\n");
-	           
-	                System.out.println("Enter more? Y/N");
-	                String ans = scan.nextLine();
+	            System.out.println("Enter more? Y/N");
+	            String ans = scan.nextLine();
 	                if(ans.equals("y")){
 	                    cont = true;
 	                }
@@ -46,9 +42,7 @@ public class Main {
 	                    cont = false;
 	                    fw.close();
 	                }
-	            
-	            
-	            
+	        
 	            }
 	        
 	        }
@@ -58,11 +52,8 @@ public class Main {
 	    }
 	    
 	    
-	    public static void main(String[] args) {
-	        
-	        
-	        start();
-	        
+	    public static void main(String[] args) {       
+	        start(); 
 	    }
 	    
 	}
